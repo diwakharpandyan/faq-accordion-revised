@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  background-color: hsl(275, 100%, 97%);
+  font-size: 16px;
+  padding: 5rem 1rem;
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-repeat: repeat-x;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+main {
+  min-height: 400px;
+  min-width: 300px;
+  max-width: 640px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+}
+.heading img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+h1 {
+  color: hsl(292, 42%, 14%);
+}
+h3 {
+  color: hsl(292, 42%, 14%);
+  opacity: 0.9;
+  width: 80%;
+}
+.faq {
+  position: relative;
+  border-bottom: 3px solid hsl(275, 100%, 97%);
+}
+.faq:last-child {
+  border: none;
+}
+.faq p {
+  color: hsl(292, 16%, 49%);
+  font-weight: 500;
+  line-height: 1.5rem;
+  width: 80%;
+  height: 0;
+  opacity: 0;
+  transition: height 0.3s ease-in, opacity 0.3s ease-in;
+  overflow: hidden;
+}
+.faq.active p {
+  height: 13rem;
+  opacity: 1;
+}
+.faq-toggle {
+  position: relative;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0rem;
+  right: 0.5rem;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+}
+.faq-toggle img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.faq-toggle .minus {
+  display: none;
+}
+.faq.active .faq-toggle .minus {
+  display: block;
+}
+.faq.active .faq-toggle .plus {
+  display: none;
+}
+
+@media (min-width: 420px) {
+  body {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: repeat-x;
+  }
+  main {
+    padding: 2rem;
+  }
+  .heading img {
+    width: 2rem;
+    height: 2rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .faq.active p {
+    height: 7rem;
+  }
+}
