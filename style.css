@@ -54,13 +54,13 @@ h3 {
   font-weight: 500;
   line-height: 1.5rem;
   width: 80%;
-  height: 0;
+  max-height: 0;
   opacity: 0;
   transition: height 0.3s ease-in, opacity 0.3s ease-in;
   overflow: hidden;
 }
 .faq.active p {
-  height: 13rem;
+  max-height: 13rem;
   opacity: 1;
 }
 .faq-toggle {
@@ -107,6 +107,6 @@ h3 {
     font-size: 3rem;
   }
   .faq.active p {
-    height: 7rem;
+    max-height: 7rem;
   }
 }
